@@ -11,10 +11,13 @@ if app_name == "terminix" then
    -- x, y, xsize, ysize
    set_window_geometry(1200, 27, 720, 1053);
 elseif string.match(app_name, "Visual Studio Code") then
-   debug_print("X: "..x..", Y: "..y..", width: "..width..", height: "..height);  
+   -- Push the window to the left 2/3 of the screen
+   set_window_geometry(0, 0, 1200, 1053);
    set_window_workspace(2);
    change_workspace(2);
-   
-   -- Push the window to the left 2/3 of the screen
-
+elseif (string.match(app_name, "Firefox")) then
+    -- Push the window to the left 2/3 of the screen
+    set_window_geometry(0, 0, 1200, 1053);
+    set_window_workspace(1);
+    change_workspace(1);
 end
