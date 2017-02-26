@@ -20,4 +20,6 @@ elseif (string.match(app_name, "Firefox")) then
     set_window_geometry(0, 0, 1200, 1053);
     set_window_workspace(1);
     change_workspace(1);
+elseif app_name == "Caprine" then
+	focus();
 end
